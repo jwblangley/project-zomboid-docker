@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  project-zomboid:
+    build: .
+    stdin_open: true
+    tty: true
+    ports:
+      - "16261:16261/udp"
+      - "16262:16262/udp"
+    volumes:
+      - ./server-config:/home/pzuser/Zomboid
